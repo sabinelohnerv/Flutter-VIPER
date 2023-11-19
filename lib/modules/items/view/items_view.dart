@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:viper_project/modules/items/entity/item_model.dart';
 import 'package:viper_project/modules/items/presenter/items_presenter.dart';
 import 'package:viper_project/modules/items/interactor/items_interactor.dart';
-import 'package:viper_project/modules/items/router/item_router.dart';
+import 'package:viper_project/modules/items/router/items_router.dart';
 
 abstract class ItemsView {
   void showItems(List<Item> items);
@@ -19,7 +19,7 @@ class ItemsScreen extends StatefulWidget {
 
 class _ItemsScreenState extends State<ItemsScreen> implements ItemsView {
   late ItemsPresenter _presenter;
-  final ItemRouter _router = ItemRouter();
+  final ItemsRouter _router = ItemsRouter();
   List<Item> _items = [];
 
   @override
